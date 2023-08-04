@@ -1,5 +1,6 @@
 'use client'
 import Navbar from "../components/Navbar"
+import Skills from "../components/Skills"
 
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
   return (
     <main  >
         <Navbar/>
-        <section className="flex items-center justify-center h-screen ">
+        <section id="WB" className="flex items-center justify-center h-screen ">
           <div className="flex flex-col items-center text-text-primary-400">
             <div className="font-regular text-6xl mb-8">
               I'm Wout Blomme
@@ -19,7 +20,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="bg-primary-500 h-screen mx-20 rounded-t-3xl rounded-b-none flex items-center">
+        <section id="ME" className="bg-primary-500 h-screen mx-20 rounded-t-3xl rounded-b-none flex items-center">
           <div className="w-1/2">
 
           </div>
@@ -32,9 +33,20 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section  className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
+        <section id="SKILLS" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
           <div className="mb-10 font-bold text-4xl">
             Skills
+          </div>
+          <Skills></Skills>
+        </section>
+        <section id="PROJECTS" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
+          <div className="mb-10 font-bold text-4xl">
+            Projects
+          </div>
+        </section>
+        <section id="CONTACT" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
+          <div className="mb-10 font-bold text-4xl">
+            Contact
           </div>
         </section>
 

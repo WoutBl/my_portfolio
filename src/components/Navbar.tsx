@@ -1,24 +1,59 @@
-export default () => {
+import { motion } from "framer-motion"
+import { Download } from "lucide-react"
+import NavLink from "./NavLink"
+import Link from "next/link"
+
+const Navigation = ({
+    selectedSection,
+    setSelectedSection,
+    setSidebarOpen,
+    isMobile = false,
+  }: {
+    selectedSection: string
+    setSelectedSection: (section: string) => void
+    setSidebarOpen?: (open: boolean) => void
+    isMobile?: boolean
+  }) => {
+    
+    
+    
     return (
-        <div className="flex fixed flex-row items-center  justify-around w-full h-32 bg-primary-400 font-bold text-xl text-text-primary-400">
-            <div className="text-5xl font-black">
+        <div className="flex fixed flex-row items-center justify-evenly w-full h-32 bg-primary-400 font-bold text-xl text-text-primary-400">
+            <Link href="#WB" className="text-5xl font-black">
                 WB
-            </div>
+            </Link>
+            
             <div className="flex">
-                <a href="" className="mx-8 ">
+                <Link href="#ME" className="mx-8 ">
                     ME
-                </a>
-                <a href="" className="mx-8">
+                </Link>
+                <Link href="#SKILLS" className="mx-8">
                     SKILLS
-                </a >
-                <a href="" className="mx-8">
+                </Link>
+                <Link href="#PROJECTS" className="mx-8">
                     PROJECTS
-                </a>
-                <a href="" className="mx-8">
+                </Link>
+                <Link href="#CONTACT" className="mx-8">
                     CONTACT
-                </a>
+                </Link>
             </div>
-            <button className="px-8 py-4 bg-secundary-600 rounded-xl">Resume</button>
+            <motion.li
+                whileHover={{ scale: 1.05 }}
+                transition={{ ease: 'easeInOut', duration: 0.1 }}
+                key="download"
+                className="flex "
+                >
+                <a
+                    href="/docs/WB-Resume.pdf"
+                    download
+                    className={`flex gap-2 px-8 py-4 bg-secundary-600 rounded-xl`}>
+                    <Download
+                    />
+                    Resume
+                </a>
+            </motion.li>
         </div>
     )
 }
+
+export default Navigation
