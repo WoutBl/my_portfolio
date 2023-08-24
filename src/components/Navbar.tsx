@@ -4,15 +4,9 @@ import NavLink from "./NavLink"
 import Link from "next/link"
 
 const Navigation = ({
-    selectedSection,
-    setSelectedSection,
-    setSidebarOpen,
-    isMobile = false,
+    
   }: {
-    selectedSection: string
-    setSelectedSection: (section: string) => void
-    setSidebarOpen?: (open: boolean) => void
-    isMobile?: boolean
+    
   }) => {
     
     
