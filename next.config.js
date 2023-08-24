@@ -4,14 +4,22 @@ var $ = require("jquery");
     if (typeof window !== "undefined") {
         window.$ = window.jQuery = require("jquery");
     }
-const nextConfig = {webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+const nextConfig = {
+    
+    images: {
+        domains: ['firebasestorage.googleapis.com'],
+    },
+
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
     
     config.plugins.push(
      new webpack.ProvidePlugin({
      $: "jquery",
      jQuery: "jquery",
      "window.jQuery": "jquery",
+     
   }));
+
  return config;
 }
 }

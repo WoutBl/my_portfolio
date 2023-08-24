@@ -17,6 +17,7 @@ module.exports = {
         text: {
           'primary-400': '#8000FF',
           'primary-500': '#9A208C',
+          'secundary-500': '#d166c5',
         }
       },
     },

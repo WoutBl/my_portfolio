@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^13.4.4",
-    "@splidejs/react-splide": "^0.7.12",
+    "@splidejs/react-splide": "github:splidejs/react-splide",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
     "@types/node": "20.2.1",
     "@types/react": "18.2.6",
@@ -28,6 +28,7 @@
     "react-icons": "^4.9.0",
     "react-intersection-observer": "^9.4.3",
     "react-owl-carousel": "^2.3.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-hash-link": "^2.4.3",
     "splide-nextjs": "^2.4.23",
     "tailwindcss": "3.3.2",

@@ -1,5 +1,6 @@
 import '/src/assets/globals.css'
 import localFont from '@next/font/local'
+// import '../assets/tailwindcss.css'
 
 const poppins = localFont({
   src: [
