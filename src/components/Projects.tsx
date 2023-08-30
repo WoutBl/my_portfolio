@@ -1,7 +1,7 @@
 import {Carousel} from 'react-responsive-carousel';
 import Link from "next/link"
 import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide'
-import { ChevronRightIcon } from 'lucide-react'
+import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import { IProject } from '../interfaces/IProject'
 import Image from 'next/image'
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
@@ -13,6 +13,7 @@ export default ({projects }: { projects: IProject[] }) => {
     // })
     console.log(projects)
     return (
+
         // <Carousel>
         //     <div>
         //         <Link href="#ME" className="mx-8 hover:text-text-secundary-500">
@@ -30,29 +31,30 @@ export default ({projects }: { projects: IProject[] }) => {
         //         </Link>
         //     </div>
         // </Carousel>
+        <div className='relative'>
+
+        
+        <div className="absolute bottom-0 left-0 top-0 z-0 h-full bg-gradient-to-r from-own-neutral-0 to-transparent dark:from-own-neutral-900 sm:w-10 md:w-28 lg:w-36 xl:w-60" />
+        <div className="absolute bottom-0 right-0 top-0 z-0 h-full bg-gradient-to-l from-own-neutral-0 to-transparent dark:from-own-neutral-900 sm:w-10 md:w-28 lg:w-36 xl:w-60" />
         <Splide
           className="splide__carousel h-1/2 !visible"
           options={{
             type: 'loop',
-            perPage: 1,
+            perPage: 2,
             focus: 'center',
             perMove: 1,
             wheel: true,
-            padding: '5rem',
+            padding: '1rem',
             pagination: false,
-            
+            arrows: true,
           }}
         >
-            <div className="absolute left-2 sm:left-14 lg:left-24 xl:left-28">
-              <button className="splide__arrow--prev rounded-full bg-own-neutral-800 p-2  opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white ">
-                <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
-              </button>
-            </div>
+            
           
             {/* use map to render the rest of the projects */}
             {projects.map((project, index) => {
               return (
-                <SplideSlide key={index} className="splide__slide-carousel">
+                <SplideSlide key={index} className="splide__slide-carousel flex justify-center">
                   <Link
                     href='#ME'
                     className="group/card focus:outline-none"
@@ -83,19 +85,9 @@ export default ({projects }: { projects: IProject[] }) => {
               )
             })}
 
-          {/* Carousel Arrows */}
-          <div className="splide__arrows  bottom-1/2 left-0 right-0 z-50 flex w-full -translate-y-[60px]  justify-center px-2">
-            <div className="absolute left-2 sm:left-14 lg:left-24 xl:left-28">
-              <button className="splide__arrow--prev rounded-full bg-own-neutral-800 p-2  opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white ">
-                <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
-              </button>
-            </div>
-            <div className=" right-2 sm:right-14 lg:right-24 xl:right-28">
-              <button className="splide__arrow--next rounded-full bg-own-neutral-800 p-2 opacity-60 shadow-lg ring-own-neutral-300 focus:outline-none focus-visible:ring-2 dark:bg-own-neutral-200 dark:ring-white ">
-                <ChevronRightIcon className="stroke-own-neutral-100 dark:stroke-slate-900" />
-              </button>
-            </div>
-          </div>
+          
+          
         </Splide>
+        </div>
     )
 }

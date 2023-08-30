@@ -6,6 +6,47 @@
 /* SplideJS has there own css file i can not add tailwind classes to it */
 @layer components {
 
+
+    /* Replace this with your actual CSS file */
+
+/* Adjust the position of the arrow buttons */
+
+
+    .stroke-own-neutral-100 {
+        stroke: #E6EAF2;
+    }
+
+    .flex_center{
+        display: flex;
+        align-items: center;
+    }
+    :is(.dark .dark\:from-own-neutral-900) {
+        --tw-gradient-from: #1C1F24 var(--tw-gradient-from-position);
+        --tw-gradient-from-position:  ;
+        --tw-gradient-to: rgb(28 31 36 / 0)  var(--tw-gradient-from-position);
+        --tw-gradient-to-position:  ;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+    .ring-own-neutral-300 {
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(189 193 199 / var(--tw-ring-opacity));
+    }
+
+    .bg-own-neutral-900 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(28 31 36 / var(--tw-bg-opacity));
+    }
+    .bg-own-neutral-800 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(33 35 38 / var(--tw-bg-opacity));
+    }
+    .from-own-neutral-0 {
+        --tw-gradient-from: #FFCCCC var(--tw-gradient-from-position);
+        --tw-gradient-from-position:  ;
+        --tw-gradient-to: rgb(255 255 255 / 0)  var(--tw-gradient-from-position);
+        --tw-gradient-to-position:  ;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
     .splide__carousel {
         display: flex;
         overflow: hidden;

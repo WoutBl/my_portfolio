@@ -45,11 +45,14 @@ export default function Home() {
           </div>
           
         </section>
-        <section id="PROJECTS" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
+        <section id="PROJECTS" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center ">
           <div className="mb-10 font-bold text-4xl w-1/2">
             Projects
           </div>
-          <Projects projects={projectsData}/>
+          <div className="w-1/2">
+            <Projects projects={projectsData}/>
+          </div>
+          
         </section>
         <section id="CONTACT" className="bg-primary-500 h-screen mx-20  rounded-b-none flex items-center">
           <div className="mb-10 font-bold text-4xl">
