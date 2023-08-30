@@ -5,35 +5,12 @@ import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react'
 import { IProject } from '../interfaces/IProject'
 import Image from 'next/image'
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
+import { useRouter } from 'next/router';
 
 export default ({projects }: { projects: IProject[] }) => {
-    // Sort the projects by date
-    // projects.sort((a, b) => {
-    //   return new Date(b.date).getTime() - new Date(a.date).getTime()
-    // })
-    console.log(projects)
+      
     return (
-
-        // <Carousel>
-        //     <div>
-        //         <Link href="#ME" className="mx-8 hover:text-text-secundary-500">
-        //             ME
-        //         </Link>
-        //     </div>
-        //     <div>
-        //         <Link href="#ME" className="mx-8 hover:text-text-secundary-500">
-        //             ME
-        //         </Link>
-        //     </div>
-        //     <div>
-        //         <Link href="#ME" className="mx-8 hover:text-text-secundary-500">
-        //             ME
-        //         </Link>
-        //     </div>
-        // </Carousel>
         <div className='relative'>
-
-        
         <div className="absolute bottom-0 left-0 top-0 z-0 h-full bg-gradient-to-r from-own-neutral-0 to-transparent dark:from-own-neutral-900 sm:w-10 md:w-28 lg:w-36 xl:w-60" />
         <div className="absolute bottom-0 right-0 top-0 z-0 h-full bg-gradient-to-l from-own-neutral-0 to-transparent dark:from-own-neutral-900 sm:w-10 md:w-28 lg:w-36 xl:w-60" />
         <Splide
@@ -49,18 +26,16 @@ export default ({projects }: { projects: IProject[] }) => {
             arrows: true,
           }}
         >
-            
-          
             {/* use map to render the rest of the projects */}
             {projects.map((project, index) => {
               return (
                 <SplideSlide key={index} className="splide__slide-carousel flex justify-center">
                   <Link
-                    href='#ME'
+                    href='/ShareCar'
                     className="group/card focus:outline-none"
                   >
                     <div className="flex flex-col justify-center gap-2 group-focus-visible/card:ring-2 group-focus-visible/card:ring-slate-100 dark:group-focus-visible/card:ring-slate-600">
-                      <div className="group/img relative overflow-hidden rounded-own-md">
+                      <div className="group/img relative overflow-hidden rounded-xl">
                         <Image
                           src={`${project.image}`}
                           alt={project.name}
@@ -88,6 +63,12 @@ export default ({projects }: { projects: IProject[] }) => {
           
           
         </Splide>
+        <Link
+        href={'/ShareCar'}
+        className='ml-40'>
+          hey
+        </Link>
         </div>
+        
     )
 }

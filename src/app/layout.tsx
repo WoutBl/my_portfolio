@@ -33,6 +33,7 @@ const poppins = localFont({
   variable: '--font-Poppins'
 })
 
+
 export const metadata = {
   title: 'Wout Blomme',
   description: 'Portfolio Wout Blomme',

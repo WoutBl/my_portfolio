@@ -7,10 +7,57 @@
 @layer components {
 
 
-    /* Replace this with your actual CSS file */
+    .bg-own-neutral-100 {
+        --tw-bg-opacity: 1;
+        background-color: rgb(255 179 179 / var(--tw-bg-opacity));
+    }
 
-/* Adjust the position of the arrow buttons */
+    .from-own-neutral-50 {
+        --tw-gradient-from: #FFCCCC var(--tw-gradient-from-position);
+        --tw-gradient-from-position:  ;
+        --tw-gradient-to: rgb(250 252 255 / 0)  var(--tw-gradient-from-position);
+        --tw-gradient-to-position:  ;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
 
+    .maskedImageContainer {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 100%; /* Make the container round */
+        overflow: hidden; /* Clip the image to the container's rounded shape */
+      }
+      
+      .maskedImage {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    .to-own-secondary-800 {
+        --tw-gradient-to: #244076 var(--tw-gradient-to-position);
+        --tw-gradient-to-position:  
+    }
+    .from-own-secondary {
+        --tw-gradient-from: #4780EB var(--tw-gradient-from-position);
+        --tw-gradient-from-position:  ;
+        --tw-gradient-to: rgb(71 128 235 / 0)  var(--tw-gradient-from-position);
+        --tw-gradient-to-position:  ;
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    }
+
+    .ring-own-neutral-200{
+        --tw-ring-opacity: 1;
+        --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+    }
+
+    .stroke-own-neutral-900 {
+        stroke: #1C1F24;
+    }
+    
+    .h-75vh {
+        height: 75vh;
+    }
 
     .stroke-own-neutral-100 {
         stroke: #E6EAF2;
