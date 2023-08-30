@@ -31,7 +31,7 @@ export default ({projects }: { projects: IProject[] }) => {
               return (
                 <SplideSlide key={index} className="splide__slide-carousel flex justify-center">
                   <Link
-                    href='/ShareCar'
+                    href='#WB'
                     className="group/card focus:outline-none"
                   >
                     <div className="flex flex-col justify-center gap-2 group-focus-visible/card:ring-2 group-focus-visible/card:ring-slate-100 dark:group-focus-visible/card:ring-slate-600">
@@ -42,9 +42,9 @@ export default ({projects }: { projects: IProject[] }) => {
                           width={500}
                           height={300}
                         />
-                        <p className="img-hover__text absolute inset-0 flex h-full flex-col items-center justify-center bg-own-neutral-900 bg-opacity-70 text-xl font-semibold text-own-neutral-200 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100 dark:text-own-neutral-100 sm:text-lg md:text-xl xl:text-xl">
+                        {/* <p className="img-hover__text absolute inset-0 flex h-full flex-col items-center justify-center bg-own-neutral-900 bg-opacity-70 text-xl font-semibold text-own-neutral-200 opacity-0 transition duration-500 ease-in-out group-hover/img:opacity-100 dark:text-own-neutral-100 sm:text-lg md:text-xl xl:text-xl">
                           Read more
-                        </p>
+                        </p> */}
                       </div>
                       <div className="img__text flex flex-col">
                         <h3 className="text-xl font-semibold text-own-neutral-900 dark:text-own-neutral-200 sm:text-lg md:text-xl xl:text-xl">
@@ -63,11 +63,7 @@ export default ({projects }: { projects: IProject[] }) => {
           
           
         </Splide>
-        <Link
-        href={'/ShareCar'}
-        className='ml-40'>
-          hey
-        </Link>
+        
         </div>
         
     )
