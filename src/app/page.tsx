@@ -51,7 +51,7 @@ export default function Home() {
           </div>
         </section>
         <section id="SKILLS" className="bg-primary-500 h-50vh mx-20  rounded-b-none flex flex-col items-center justify-center">
-          <div className="flex row-start-1 justify-center  w-full mb-10 font-bold text-4xl">
+          <div className="flex text-text-primary-500 items-start justify-center w-1/2 mb-10 font-bold text-4xl">
             Skills
           </div>
           <div className="flex row-start-2 text-text-primary-500 justify-center w-full  ">
